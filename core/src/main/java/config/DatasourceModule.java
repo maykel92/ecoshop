@@ -4,9 +4,9 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import dagger.Module;
 import dagger.Provides;
+import dto.AppConfig;
 import jakarta.inject.Singleton;
 import org.jooq.DSLContext;
-
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
 
