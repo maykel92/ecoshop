@@ -10,7 +10,7 @@ Este proyecto es una API para una tienda ecológica ficticia, el objetivo de est
 - Maven
 - MySql
 
-##Descripcion
+## Descripcion
 
 Este proyecto es una Api simple para un e-commerce que he querido hacer como portifolio, elegí salirme del estandar de spring y usar un framework ligero como es javalin,
 ya que srping lo uso a diario en mi trabajo 
