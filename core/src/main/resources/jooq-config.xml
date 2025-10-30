@@ -25,8 +25,8 @@
         </generate>
 
         <target>
-            <packageName>jooq</packageName>
-            <directory>${project.build.directory}/generated-sources/jooq</directory>
+            <packageName>es.ecoshop.api.genereted.jooq</packageName>
+            <directory>target/generated-sources/jooq</directory>
         </target>
 
     </generator>

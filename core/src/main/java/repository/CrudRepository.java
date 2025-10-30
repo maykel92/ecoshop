@@ -5,6 +5,7 @@ import org.jooq.Field;
 import org.jooq.Table;
 import org.jooq.UpdatableRecord;
 import org.jooq.impl.DSL;
+import pagination.PageRequest;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +38,20 @@ public abstract class CrudRepository<R extends UpdatableRecord<R>, ID, DTO> {
         return dsl.selectFrom(table())
                 .fetch();
     }
+    public List<R> fidndPage(PageRequest pageRequest){
+        return dsl.selectFrom(table())
+                .limit(pageRequest.size())
+                .offset(pageRequest.offSet())
+                .fetch();
+    }
 
+    public int count(){
+        return Optional.ofNullable(
+                dsl.selectCount()
+                        .from(table())
+                        .fetchOne(0, int.class)
+        ).orElse(0);
+    }
 
     public R insert(DTO dto) {
         return dsl.transactionResult(config -> {
